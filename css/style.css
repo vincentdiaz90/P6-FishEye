@@ -1,0 +1,424 @@
+@import url("photographer.css");
+
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+}
+
+
+header {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    height: 90px;
+    cursor: pointer;
+}
+
+h1 {
+    color: #901C1C;
+    margin-right: 100px;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 100px;
+}
+
+.img-photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 33%;
+}
+
+.photographers_section {
+    margin-top: 5em;
+    line-height: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2em;
+    column-gap: 19em;
+}
+
+.photgraphers_link{
+    text-decoration: none;
+}
+
+.photographerCard_img{
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.photographerCard_name{
+    color:var(--primaire-text);
+    font-size: 40px;
+    margin-top: 60px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.photographerCard_location_city{
+    color: var(--secondaire-text);
+    font-size: 20px;
+}
+
+.photographerCard_location_country{
+    color: var(--secondaire-text);
+    font-size: 20px;
+}
+
+.photographerCard_tagline{
+    color: var(--black);
+}
+
+.photographerCard_price{
+    color: var(--secondaire-textcontour);
+    font-size: 12px;
+    margin-bottom: 70px;
+}
+
+
+
+        /* partie photographer.html */
+        
+            /* partie photographer.html entete*/
+        
+
+.photographMedia-entete{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15em;
+    row-gap: 2.5em;
+    min-height: 300px;
+}
+
+#photographerProfil {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 65%;
+    justify-content: center;
+    margin: auto 0;
+    margin-left: 10%;
+}
+
+#photographerProfil > *{
+flex: 1 1 33%;
+}
+
+.photographerContact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photographerPhoto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.photographerMedia_media{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    height: 500px;
+    width: 90%;
+}
+
+
+            /* partie photographer.html media*/
+
+.photograph-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 3em;
+    text-align: center;
+    row-gap: 5em;
+    margin-top: 150px;
+}
+
+.photographerMedia{
+  width: 500px;
+  height: auto;
+}
+
+.photographerMedia:last-child{
+    padding-bottom: 100px;
+}
+
+.photographerUniqueCard {
+    display: flex;
+    margin: 2% 5% 0% 5%;
+    justify-content: space-between;
+}
+
+.photographerUniqueCard-title{
+    color: var(--secondaire-text);
+    font-size: 23px;
+    font-weight: 500;
+}
+
+/*
+.fa-light{
+  color: #f1f1f1;
+}
+*/
+
+.photographers-hearthPrice{
+    position: fixed;
+    right: 10px;
+    bottom: 0px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    background-color: var(--secondaire-contour);
+    min-width: 80px;
+}
+
+.photographerUniqueCard-likes{
+  cursor: pointer;
+}
+
+
+
+        /* photographer.html : Filter*/
+
+.filter-form > *{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#label-filter-form{
+    font-size: 20px;
+    margin: 0 20px 0 40px;
+}
+
+#filter-select{
+    padding: 20px 40px;
+    border-radius: 5%;
+    border: none;
+    background-color: var(--primaire-contour);
+    color: var(--white);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+        /* photographer.html : modale-carrousel*/
+
+
+
+.carrousel-modale{
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: #f1f1f1;
+    display: none;
+}
+
+.fa-xmark{
+    position: absolute;
+    top: 7%;
+    right: 3%;
+    font-size: 70px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.activeModale{
+    display: block;
+}
+
+  .cont-slides {
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cont-slides img, .cont-slides video {
+    width: auto;
+    max-width: 70%;
+    height: auto;
+    max-height: 500px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .commandes button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+  }
+  .commandes img {
+    width: 30px;
+    position: absolute;
+    
+  }
+  .commandes button:nth-child(1){
+    left: 10%;
+  }
+  .commandes button:nth-child(2){
+    right: 10%;
+  }
+  
+  
+  .name-media{
+    position: absolute;
+    bottom: 9%;
+    left: 25%;
+    font-size: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+.active {
+    opacity: 1!important;
+  }
+  
+.activeslider{
+    display: block;
+  }
+  
+
+ /* Formulaire de contact */
+
+.modal{
+  height: 90%;
+
+}
+
+#contact_modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1000px;
+    height: 100vh;
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+#contact-modal{
+  width: 100%;
+  margin-top: -14%;
+}
+
+#contactModalImg{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+#message{
+  width: 100%;
+  height: 100px;
+}
+
+label{
+margin-top: -3%;
+}
+
+.activeRed {
+  border: 2px solid red;
+  
+}
+
+.activeGreen {
+  border: 3px solid green;
+}
+
+
+  
+  /* MediaQuery */
+
+
+  
+@media screen and (max-width:1345px) {
+  .commandes button{
+    top: 2%;
+  }
+  .commandes button:nth-child(1){
+    left: 40%;
+  }
+  .commandes button:nth-child(2){
+    right: 40%;
+  }
+}
+
+@media screen and (max-width:960px) {
+  .photographMedia-entete{
+    margin-top: 2em;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width:970px) {
+  #contact_modal {
+    position: absolute;
+    height: 150vh;
+    top: 70%;
+  }
+}
+
+@media screen and (max-width:950px) {
+  .commandes button:nth-child(1){
+    left: 30%;
+  }
+  .commandes button:nth-child(2){
+    right: 30%;
+  }
+}
+
+@media screen and (max-width:717px){
+
+  .header{
+    justify-content: center;
+  }
+
+  .header img {
+    margin: 0 auto;
+  }
+
+  .header h1{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .commandes button:nth-child(1){
+    left: 20%;
+  }
+  .commandes button:nth-child(2){
+    right: 20%;
+  }
+}

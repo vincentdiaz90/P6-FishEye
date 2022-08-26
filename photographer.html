@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <title>Fisheye - photographe </title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="assets/images/logo.png" class="logo" />
+      </a>
+    </header>
+    <main id="main">
+
+      <section id="profil-card">
+        <div class="photograph-header"></div>
+        <div class="filter-form-wrapper"></div>
+        <div class="photograph-media"></div>
+        <div class="carrousel-modale"></div>
+      </section>
+
+      <section class="photographers-hearthPrice">
+        <span class="photographers-hearth"></span>
+        <span class="photographers-price"></span>
+      </section>
+
+    </main>
+    <div id="contact_modal">
+			<div class="modal">
+        <div id="contact-modal"></div>
+			</div>
+		</div>
+
+    <!-- Api -->
+    <script src="scripts/api/Api.js"></script>
+
+    <!-- Models -->
+    <script src="scripts/models/Image.js"></script>
+    <script src="scripts/models/Video.js"></script>
+    <script src="scripts/models/Medias.js"></script>
+    <script src="scripts/models/Photographers.js"></script>
+
+    <!-- Templates -->
+    <script src="scripts/templates/FilterForm.js"></script>
+    <script src="scripts/templates/PhotographerImage.js"></script>
+    <script src="scripts/templates/PhotographerVideo.js"></script>
+    <script src="scripts/templates/PhotographerUnique.js"></script>
+    <script src="scripts/templates/PhotographerHearth.js"></script>
+    <script src="scripts/templates/PricePhotographer.js"></script>
+    <script src="scripts/templates/CarrouselModale.js"></script>
+    <script src="scripts/templates/ContactForm.js"></script>
+  
+    <!-- Modal -->
+    <script src="scripts/utils/contactForm.js"></script>
+
+    <!-- Controller -->
+    <script src="scripts/pages/photographer.js"></script>
+
+    
+    <!-- Observer -->
+    <script src="scripts/observers/carrouselMedia.js"></script>
+    <script src="scripts/observers/Likes.js"></script>
+    <script src="scripts/observers/SubmitForm.js"></script>
+
+
+  </body>
+</html>
